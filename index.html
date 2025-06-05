@@ -129,13 +129,10 @@
             <li class="indent-1">For Alienware products, you need to press the F2 key on startup to get to the BIOS settings.</li>
             <li class="indent-1">In the security tab, you need to go to Secure Boot settings and deactivate this feature.</li>
             <li>Audio: After you update your driver and disable Secure Boot, you may not have audio in your games.</li>
-            <li class="indent-1">You will want to update from Pulseaudio to Pipewire's audio.</li>
-            <li class="indent-1">From Software Manager download: </li>
-            <li class="indent-1">Not sure if I uninstalled anything before it worked, but the system did have: pipewire, pipewire alsa, pipewire audio, pipewire bin, pipewire pulse, and Gstreamer downloaded when it did work. Pulseaudio utils and xfce4-pulseaudio-plugin were also installed.</li>
-            <li class="indent-2">apt purge pipewire pipewire-bin</li>
-            <li class="indent-2">systemctl enable --user pulseaudio</li>
-            <li class="indent-2">sudo reboot</li>
-            <li class="indent-2"><a href="https://forums.linuxmint.com/viewtopic.php?t=439264" target="_blank">PulseAudio Restore</a></li>
+            <li class="indent-1">apt purge pipewire pipewire-bin</li>
+            <li class="indent-1">systemctl enable --user pulseaudio</li>
+            <li class="indent-1">sudo reboot</li>
+            <li class="indent-1"><a href="https://forums.linuxmint.com/viewtopic.php?t=439264" target="_blank">PulseAudio Restore</a></li>
             <li>Controller: After your audio is working, you can set up the controller via bluetooth.</li>
             <li class="indent-1">Option 1: xone for Dongle Pairing</li>
             <li class="indent-1"><a href="https://github.com/medusalix/xone" target="_blank">xone, see Guide instructions</a></li>
