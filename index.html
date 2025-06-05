@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Setup</title>
+    <style>
+        /* Reset margin and padding for the whole document */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Keep default or custom margin and padding for bullet points */
+        ul, li {
+            margin-left: 20px; /* Or set your preferred spacing */
+            padding-left: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #fdf4e3; /* Slightly off-white (yellowish) background */
+            color: #000000; /* Black text */
+            line-height: 1.5; /* Set line spacing to 1.5 */
+            font-size: 1em; /* Set the body font size to the default */
+        }
+
+        .subject {
+            font-size: inherit; /* Inherit font size from body */
+            margin: 0 0 5px;
+            padding: 0; /* Remove extra padding */
+            line-height: normal; /* Use normal line height */
+        }
+
+        .intro, .chapter, .notes {
+            margin-top: 20px;
+        }
+
+        .indent-1 {
+            margin-left: 50px;
+            list-style-type: none;
+        }
+
+        .indent-2 {
+            margin-left: 100px;
+            list-style-type: none;
+        }
+
+        .indent-3 {
+            margin-left: 150px;
+            list-style-type: none;
+        }
+
+        .intro a, .chapter a, .notes a, .attachments a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .intro a:hover, .chapter a:hover, .notes a:hover, .attachments a:hover {
+            text-decoration: underline;
+        }
+
+        /* Style for h1 to inherit font size from body */
+        h1 {
+            font-family: Arial, sans-serif;  /* Same as the body */
+            font-size: inherit; /* Inherit font size from body */
+            font-weight: normal; /* Same weight as the body */
+        }
+    </style>
+</head>
+<body>
+
+    <span class="subject">Linux</span><br>
+    <span class="subject">Scratch Setup</span><br>
+    <hr>
+
+    <div class="intro">
+        <p>This is the preferences setup page, predominantly used for Linux Mint.</p>
+    </div>
+
+    <!-- Chapter 1 -->
+    <div class="chapter">
+        <h1>General:</h1>
+        <ul>
+            <li>Add firefox extensions, like uBlock Origin.</li>
+            <li>Right click on the panel and click expand options, add "show desktop feature" move it to far right.</li>
+            <li>Power Manager: The "System" tab needs to be at suspend for 15 mins and the "Display" tab needs to be deactivated as it doesnt work with all hardware.</li>
+            <li class="indent-1">These power manager settings may be the default.</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 2 -->
+    <div class="chapter">
+        <h1>Software:</h1>
+        <ul>
+            <li>Bitwarden</li>
+            <li>Discord</li>
+            <li>FreeTube</li>
+            <li>HDtodayz</li>
+            <li>Heroic Games Launcher</li>
+            <li>Inhibit, AKA "Keep Me Awake"</li>
+            <li>OBS Studio</li>
+            <li>PDFsam</li>
+            <li class="indent-1">Used to merge PDF documents.</li>
+            <li>Steam</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 3 -->
+    <div class="chapter">
+        <h1>Special Software:</h1>
+        <ul>
+            <li>ProtonVPN: This is a free VPN that has to be downloaded via the terminal. These are the commands, entered one line at a time:</li>
+            <li class="indent-1">wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb</li>
+            <li class="indent-1">sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update</li>
+            <li class="indent-1">sudo apt install proton-vpn-gnome-desktop</li>
+            <li class="indent-1"><a href="https://protonvpn.com/support/official-linux-vpn-debian/" target="_blank">ProtonVPN Download Instructions</a></li>
+        </ul>
+    </div>
+
+    <!-- Chapter 4 -->
+    <div class="chapter">
+        <h1>Gaming Settings:</h1>
+        <ul>
+            <li>Driver Manager: The default, open-source, driver (Nouveau) is not compatible for gaming.</li>
+            <li class="indent-1">The latest recommended driver in Driver Manager should be equipped and the computer restarted.</li>
+            <li>Secure Boot: The "Secure Boot" feature in the BIOS blocks Nvidia drivers from being accessed.</li>
+            <li class="indent-1">For Alienware products, you need to press the F2 key on startup to get to the BIOS settings.</li>
+            <li class="indent-1">In the security tab, you need to go to Secure Boot settings and deactivate this feature.</li>
+            <li>Audio: After you update your driver and disable Secure Boot, you may not have audio in your games.</li>
+            <li class="indent-1">You will want to update from Pulseaudio to Pipewire's audio.</li>
+            <li class="indent-1">From Software Manager download: </li>
+            <li class="indent-1">Not sure if I uninstalled anything before it worked, but the system did have: pipewire, pipewire alsa, pipewire audio, pipewire bin, pipewire pulse, and Gstreamer downloaded when it did work. Pulseaudio utils and xfce4-pulseaudio-plugin were also installed.</li>
+            <li class="indent-2">apt purge pipewire pipewire-bin</li>
+            <li class="indent-2">systemctl enable --user pulseaudio</li>
+            <li class="indent-2">sudo reboot</li>
+            <li class="indent-2"><a href="https://forums.linuxmint.com/viewtopic.php?t=439264" target="_blank">PulseAudio Restore</a></li>
+        </ul>
+    </div>
+
+    <!-- Chapter 5 -->
+    <div class="chapter">
+        <h1>Launchers:</h1>
+        <ul>
+            <li>Heroic Game Launcher:</li>
+            <li class="indent-1">Download the game, right click, settings, select proton-latest</li>
+            <li>Steam:</li>
+            <li class="indent-1">Download the game, right click, settings, select Proton-hotfix</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 6 -->
+    <div class="chapter">
+        <h1>Chapter 6:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 7 -->
+    <div class="chapter">
+        <h1>Chapter 7:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 8 -->
+    <div class="chapter">
+        <h1>Chapter 8:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 9 -->
+    <div class="chapter">
+        <h1>Chapter 9:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 10 -->
+    <div class="chapter">
+        <h1>Chapter 10:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 11 -->
+    <div class="chapter">
+        <h1>Chapter 11:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 12 -->
+    <div class="chapter">
+        <h1>Chapter 12:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 13 -->
+    <div class="chapter">
+        <h1>Chapter 13:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 14 -->
+    <div class="chapter">
+        <h1>Chapter 14:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 15 -->
+    <div class="chapter">
+        <h1>Chapter 15:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 16 -->
+    <div class="chapter">
+        <h1>Chapter 16:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 17 -->
+    <div class="chapter">
+        <h1>Chapter 17:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 18 -->
+    <div class="chapter">
+        <h1>Chapter 18:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 19 -->
+    <div class="chapter">
+        <h1>Chapter 19:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <!-- Chapter 20 -->
+    <div class="chapter">
+        <h1>Chapter 20:</h1>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <div class="notes">
+        <h1>Notes:</h1>
+        <p>This is the notes section. You can add additional overview or background information here.</p>
+        <ul>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+            <li>Bullet point</li>
+        </ul>
+    </div>
+
+    <hr>
+    <br>
+
+    <!-- Attachment Section -->
+    <div class="attachments">
+        <h1>Attachments:</h1>
+        <ul>
+            <li><a href="Attachment_1.pdf" target="_blank">Attachment 1</a></li>
+            <li><a href="Attachment_2.pdf" target="_blank">Attachment 2</a></li>
+            <li><a href="Attachment_3.pdf" target="_blank">Attachment 3</a></li>
+            <li><a href="Attachment_4.pdf" target="_blank">Attachment 4</a></li>
+            <li><a href="Attachment_5.pdf" target="_blank">Attachment 5</a></li>
+            <li><a href="Attachment_6.pdf" target="_blank">Attachment 6</a></li>
+            <li><a href="Attachment_7.pdf" target="_blank">Attachment 7</a></li>
+            <li><a href="Attachment_8.pdf" target="_blank">Attachment 8</a></li>
+            <li><a href="Attachment_9.pdf" target="_blank">Attachment 9</a></li>
+            <li><a href="Attachment_10.pdf" target="_blank">Attachment 10</a></li>
+            <li><a href="Attachment_11.pdf" target="_blank">Attachment 11</a></li>
+            <li><a href="Attachment_12.pdf" target="_blank">Attachment 12</a></li>
+            <li><a href="Attachment_13.pdf" target="_blank">Attachment 13</a></li>
+            <li><a href="Attachment_14.pdf" target="_blank">Attachment 14</a></li>
+            <li><a href="Attachment_15.pdf" target="_blank">Attachment 15</a></li>
+            <li><a href="Attachment_16.pdf" target="_blank">Attachment 16</a></li>
+            <li><a href="Attachment_17.pdf" target="_blank">Attachment 17</a></li>
+            <li><a href="Attachment_18.pdf" target="_blank">Attachment 18</a></li>
+            <li><a href="Attachment_19.pdf" target="_blank">Attachment 19</a></li>
+            <li><a href="Attachment_20.pdf" target="_blank">Attachment 20</a></li>
+            <li><a href="https://www.example.com" target="_blank">Web Link Example</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
