@@ -80,15 +80,29 @@
 
     <!-- Chapter 1 -->
     <div class="chapter">
-        <h1>Preferences:</h1>
+        <h1>Preferences, OS Setup, Troubleshooting</h1>
         <ul>
-            <li>Add Firefox extensions, like uBlock Origin.</li>
-            <li>Enable autoscrolling on Firefox.</li>
             <li>Panel: Add "show desktop feature" move it to far right.</li>
             <li>Power Manager: The "System" tab needs to be at suspend for 15 mins and the "Display" tab needs to be deactivated as it doesnt work with all hardware.</li>
             <li class="indent-1">These power manager settings may be the default.</li>
             <li>Window Manager: Change the tile window commands to work in the keyboard tab.</li>
-            <li class="indent-1">Keyboard: These changes, upon confirmation, will remove the default "xfce4-popup-whiskermenu" launch command in the Application Shortcut settings.</li>
+            <li class="indent-1">Keyboard: These changes, upon confirmation, will remove the default "xfce4-popup-whiskermenu" launch command in the "Application Shortcut" settings.</li>
+            <li>Secure Boot: The "Secure Boot" feature in the BIOS blocks Nvidia drivers from being accessed.</li>
+            <li class="indent-1">For Alienware products, you need to press the F2 key on startup to get to the BIOS settings.</li>
+            <li class="indent-1">In the security tab, you need to go to Secure Boot settings and deactivate this feature.</li>
+            <li>Driver Manager: The default, open-source, driver (Nouveau) is not compatible with many software types, like gaming.</li>
+            <li class="indent-1">The latest recommended driver in Driver Manager should be equipped and the computer restarted.</li>
+            <li class="indent-1"><a href="https://youtu.be/opzVyzBMNG0" target="_blank">Black Screen Fix (for some Nvidia drivers)</a></li>
+            <li>Audio: After you disable Secure Boot and update your driver, you may not have audio in some programs.</li>
+            <li class="indent-1">apt purge pipewire pipewire-bin</li>
+            <li class="indent-1">systemctl enable --user pulseaudio</li>
+            <li class="indent-1">sudo reboot</li>
+            <li class="indent-1"><a href="https://forums.linuxmint.com/viewtopic.php?t=439264" target="_blank">PulseAudio Restore</a></li>
+            <li>Controller: After your audio is working, you can set up the controller via bluetooth.</li>
+            <li class="indent-1">Option 1: xone for Dongle Pairing</li>
+            <li class="indent-1"><a href="https://github.com/medusalix/xone" target="_blank">xone, see Guide instructions</a></li>
+            <li class="indent-2">Option 2: xpadneo for Bluetooth Pairing</li>
+            <li class="indent-2"><a href="https://github.com/atar-axis/xpadneo" target="_blank">xpadneo, see Installer terminal commands</a></li>
         </ul>
     </div>
 
@@ -128,15 +142,20 @@
 
     <!-- Chapter 4 -->
     <div class="chapter">
-        <h1>Troubleshoot (Gaming) Settings:</h1>
+        <h1>OS Setup, Troubleshooting:</h1>
         <ul>
-            <li>Driver Manager: The default, open-source, driver (Nouveau) is not compatible for gaming.</li>
-            <li class="indent-1">The latest recommended driver in Driver Manager should be equipped and the computer restarted.</li>
-            <li class="indent-1"><a href="https://youtu.be/opzVyzBMNG0" target="_blank">Black Screen Fix (for some Nvidia drivers)</a></li>
+            <li>Panel: Add "show desktop feature" move it to far right.</li>
+            <li>Power Manager: The "System" tab needs to be at suspend for 15 mins and the "Display" tab needs to be deactivated as it doesnt work with all hardware.</li>
+            <li class="indent-1">These power manager settings may be the default.</li>
+            <li>Window Manager: Change the tile window commands to work in the keyboard tab.</li>
+            <li class="indent-1">Keyboard: These changes, upon confirmation, will remove the default "xfce4-popup-whiskermenu" launch command in the Application Shortcut settings.</li>
             <li>Secure Boot: The "Secure Boot" feature in the BIOS blocks Nvidia drivers from being accessed.</li>
             <li class="indent-1">For Alienware products, you need to press the F2 key on startup to get to the BIOS settings.</li>
             <li class="indent-1">In the security tab, you need to go to Secure Boot settings and deactivate this feature.</li>
-            <li>Audio: After you update your driver and disable Secure Boot, you may not have audio in your games.</li>
+            <li>Driver Manager: The default, open-source, driver (Nouveau) is not compatible with many software types, like gaming.</li>
+            <li class="indent-1">The latest recommended driver in Driver Manager should be equipped and the computer restarted.</li>
+            <li class="indent-1"><a href="https://youtu.be/opzVyzBMNG0" target="_blank">Black Screen Fix (for some Nvidia drivers)</a></li>
+            <li>Audio: After you disable Secure Boot and update your driver, you may not have audio in some programs.</li>
             <li class="indent-1">apt purge pipewire pipewire-bin</li>
             <li class="indent-1">systemctl enable --user pulseaudio</li>
             <li class="indent-1">sudo reboot</li>
@@ -174,11 +193,12 @@
 
     <!-- Chapter 7 -->
     <div class="chapter">
-        <h1>Chapter 7:</h1>
+        <h1>Extentions:</h1>
         <ul>
-            <li>Bullet point</li>
-            <li>Bullet point</li>
-            <li>Bullet point</li>
+            <li>Firefox:</li>
+            <li class="indent-1">Clear URLs</li>
+            <li class="indent-1">Privacy Badger</li>
+            <li class="indent-1">uBlock Origin</li>
         </ul>
     </div>
 
