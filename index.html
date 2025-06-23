@@ -162,16 +162,18 @@
             <li class="indent-2">sudo xone-get-firmware.sh</li>
             <li class="indent-1">Plug in XBOX devices.</li>
             <li>XPadNeo: Controller compatibility software for Linux. Included are the terminal commands, entered one line at a time:</li>
-            <li class="indent-1">Unplug XBOX devices.</li>
-            <li class="indent-1">git clone https://github.com/medusalix/xone</li>
-            <li class="indent-1">cd xone && sudo ./install.sh</li>
-            <li class="indent-1">sudo xone-get-firmware.sh</li>
-            <li class="indent-1">Plug in XBOX devices.</li>
-            <li class="indent-1">Unplug XBOX devices.</li>
-            <li class="indent-1">git clone https://github.com/medusalix/xone</li>
-            <li class="indent-1">cd xone && sudo ./install.sh</li>
-            <li class="indent-1">sudo xone-get-firmware.sh</li>
-            <li class="indent-1">Plug in XBOX devices.</li>
+            <li class="indent-1">sudo apt-get install dkms linux-headers-`uname -r`</li>
+            <li class="indent-1">ggit clone https://github.com/atar-axis/xpadneo.git</li>
+            <li class="indent-1">cd xpadneo</li>
+            <li class="indent-1">sudo ./install.sh</li>
+            <li class="indent-1">sudo bluetoothctl</li>
+            <li class="indent-1">[bluetooth]# scan on</li>
+            <li class="indent-2">Locate and copy the controller's Media Access Control [MAC] Address, substituting these values below.</li>
+            <li class="indent-2">The following prompts may extra loading time..</li>
+            <li class="indent-1">[bluetooth]# scan off</li>
+            <li class="indent-1">[bluetooth]# pair [MAC]</li>
+            <li class="indent-1">[bluetooth]# trust [MAC]</li>
+            <li class="indent-1">[bluetooth]# connect [MAC]</li>
         </ul>
     </div>
 
