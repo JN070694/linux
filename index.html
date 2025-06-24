@@ -103,10 +103,10 @@
             <li class="indent-1">sudo reboot</li>
             <li class="indent-1"><a href="https://forums.linuxmint.com/viewtopic.php?t=439264" target="_blank">PulseAudio Restore</a></li>
             <li>Controller: After your audio is working, you can set up the controller via bluetooth.</li>
-            <li class="indent-1">Option 1: xone for Dongle Pairing, (see special software XONE for commands)</li>
-            <li class="indent-1"><a href="https://github.com/medusalix/xone" target="_blank">xone, see Guide instructions</a></li>
-            <li class="indent-2">Option 2: xpadneo for Bluetooth Pairing</li>
-            <li class="indent-2"><a href="https://github.com/atar-axis/xpadneo" target="_blank">xpadneo, see Installer terminal commands</a></li>
+            <li class="indent-1">Option 1: XPADNEO for Bluetooth Pairing</li>
+            <li class="indent-1"><a href="https://github.com/atar-axis/xpadneo" target="_blank">xpadneo, see Installer terminal commands</a></li>
+            <li class="indent-2">Option 2: XONE for Dongle Pairing, (see special software XONE for commands)</li>
+            <li class="indent-2"><a href="https://github.com/medusalix/xone" target="_blank">xone, see Guide instructions</a></li>
         </ul>
     </div>
 
@@ -154,14 +154,7 @@
             <li class="indent-1">sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update</li>
             <li class="indent-1">sudo apt install proton-vpn-gnome-desktop</li>
             <li class="indent-1"><a href="https://protonvpn.com/support/official-linux-vpn-debian/" target="_blank">ProtonVPN Download Instructions</a></li>
-            <li>XONE: Controller compatibility software for Linux. Included are the terminal commands, entered one line at a time:</li>
-            <li class="indent-1">Unplug XBOX devices.</li>
-            <li class="indent-2">git clone https://github.com/medusalix/xone</li>
-            <li class="indent-2">cd xone</li>
-            <li class="indent-2">sudo ./install.sh</li>
-            <li class="indent-2">sudo xone-get-firmware.sh</li>
-            <li class="indent-1">Plug in XBOX devices.</li>
-            <li>XPadNeo: Controller compatibility software for Linux. Included are the terminal commands, entered one line at a time:</li>
+            <li>XPADNEO: Controller compatibility software for Linux. Included are the terminal commands, entered one line at a time:</li>
             <li class="indent-1">sudo apt-get install dkms linux-headers-`uname -r`</li>
             <li class="indent-1">git clone https://github.com/atar-axis/xpadneo.git</li>
             <li class="indent-1">cd xpadneo</li>
@@ -169,11 +162,18 @@
             <li class="indent-1">sudo bluetoothctl</li>
             <li class="indent-2">[bluetooth]# scan on</li>
             <li class="indent-3">Locate and copy the controller's Media Access Control [MAC] Address (Ex. 5C:BA:37:DA:25:FE), substituting these values below.</li>
-            <li class="indent-3">The following prompts may extra loading time..</li>
+            <li class="indent-3">The following prompts may extra loading time.</li>
             <li class="indent-2">[bluetooth]# scan off</li>
             <li class="indent-2">[bluetooth]# pair [MAC]</li>
             <li class="indent-2">[bluetooth]# trust [MAC]</li>
             <li class="indent-2">[bluetooth]# connect [MAC]</li>
+            <li>XONE: Controller compatibility software for Linux. Included are the terminal commands, entered one line at a time:</li>
+            <li class="indent-1">Unplug XBOX devices.</li>
+            <li class="indent-2">git clone https://github.com/medusalix/xone</li>
+            <li class="indent-2">cd xone</li>
+            <li class="indent-2">sudo ./install.sh</li>
+            <li class="indent-2">sudo xone-get-firmware.sh</li>
+            <li class="indent-1">Plug in XBOX devices.</li>
         </ul>
     </div>
 
