@@ -89,8 +89,11 @@
             <li>Power Manager: The "System" tab needs to be at suspend for 15 mins and the "Display" tab needs to be deactivated as it doesnt work with all hardware.</li>
             <li class="indent-1">These power manager settings may be the default.</li>
             <li>Window Manager: Linux does not natively use the super (Windows) key with directionals to tile the windows to a certain location.</li>
-            <li class="indent-1">To add this feature, go to the Window Manager's keyboard settings and change the tile window options to your preference.
+            <li class="indent-1">To add this feature, go to the Window Manager's keyboard settings and change the tile window options to your preference.</li>
             <li class="indent-1">Note that these changes, upon confirmation, will remove the default "xfce4-popup-whiskermenu" launch command in the Keyboard's "Application Shortcut" settings.</li>
+            <li>Screenshot: By default, Linux requires you to manually choose a selection mode (e.g., region, window, full screen) before taking a screenshot, rather than immediately letting you select an area.</li>
+            <li class="indent-1">To enable direct region selection, modify the screenshot shortcut in the Keyboard’s "Application Shortcuts" settings by replacing the default command with "xfce4-screenshooter -r."</li>
+            <li class="indent-1">Note that after applying this change, the original xfce4-screenshooter command will be removed from the "Application Shortcuts" settings.</li>
             <li>Secure Boot: The "Secure Boot" feature in the BIOS blocks Nvidia drivers from being accessed.</li>
             <li class="indent-1">For Alienware products, you need to press the F2 key on startup to get to the BIOS settings.</li>
             <li class="indent-1">In the security tab, you need to go to Secure Boot settings and deactivate this feature.</li>
