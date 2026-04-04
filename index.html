@@ -79,6 +79,36 @@
         <p>You may need to go to AGELESS LINUX in the future.</p>
     </div>
 
+    <div class="Primary">
+        <p>Since my primary setup is Debian, I will list my startup commands, preferences.</p>
+        <p>System Settings:
+(Configure taskbar to left pane)
+System Settings > Accessibility > Screen Reader: Uncheck
+System Settings > Color & Themes > Breeze Dark
+System Settings > Color & Themes > Login Screen (SDDM)
+
+Setup Commands:
+sudo apt purge firefox-esr
+sudo apt install maliit-keyboard
+
+To install flatpaks
+sudo apt install flatpak
+sudo apt install plasma-discover-backend-flatpak
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+To install flatpak packages
+flatpak install flathub com.brave.Browser
+flatpak install flathub com.bitwarden.desktop
+flatpak install flathub org.mozilla.Thunderbird
+
+DisplayLink
+(Download Synaptics APT Repository)
+sudo apt install ./Downloads/synaptics-repository-keyring.deb
+sudo apt update
+sudo apt install displaylink-driver
+(Restart PC)</p>
+    </div>
+
     <!-- Attachment Section -->
     <div class="attachments">
         <h1>Attachments:</h1>
