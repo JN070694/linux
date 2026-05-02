@@ -90,12 +90,22 @@
             <li class="indent-1">sudo apt purge akregator</li>
             <li class="indent-1">sudo apt purge firefox-esr</li>
             <li class="indent-1">sudo apt purge konqueror</li>
-            <li class="indent-1">curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin CHANNEL=nightly sh</li>
             <li class="indent-1">sudo apt install clamav clamav-daemon -y</li>
             <li class="indent-2">sudo freshclam</li>
             <li class="indent-2">sudo systemctl enable --now clamav-daemon</li>
             <li class="indent-1">sudo apt install fastfetch</li>
             <li class="indent-1">sudo apt install maliit-keyboard</li>
+            <br>
+            <li>Preferred Packages:</li>
+            <li class="indent-1">Ageless Command</li>
+            <li class="indent-2">curl -fsSL https://agelesslinux.org/become-ageless.sh | sudo bash -s -- --accept --flagrant</li>
+            <li class="indent-1">Brave Nightly</li>
+            <li class="indent-2">curl -fsS https://dl.brave.com/install.sh | FLAVOR=origin CHANNEL=nightly sh</li>
+            <li class="indent-3"><a href="https://brave.com/linux/nightly/" target="_blank">Brave Nighly Download Page</a></li>
+            <li class="indent-1">Joplin</li>
+            <li class="indent-1">wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash</li>
+            <li class="indent-1">PDFsam</li>
+            <li class="indent-1"><a href="https://pdfsam.org/download-pdfsam-basic/" target="_blank">PDFsam</a></li>
             <br>
             <li>To Install Flatpaks, (KDE)</li>
             <li class="indent-1">sudo apt install flatpak</li>
@@ -104,6 +114,7 @@
             <br>
             <li>To Install Preferred Flatpak Packages</li>
             <li class="indent-1">flatpak install flathub com.brave.Browser</li>
+            <li class="indent-1">if Brave Origin, Nightly not available</li>
             <li class="indent-1">flatpak install flathub com.bitwarden.desktop</li>
             <li class="indent-1">flatpak install flathub com.discordapp.Discord</li>
             <li class="indent-1">flatpak install flathub org.kde.kdenlive</li>
@@ -123,11 +134,6 @@
             <li class="indent-1">sudo apt update</li>
             <li class="indent-1">sudo apt install displaylink-driver</li>
             <li class="indent-2"><i>(Restart PC)</i></li>
-            <br>
-            <li>Ageless Command</li>
-            <li class="indent-1">curl -fsSL https://agelesslinux.org/become-ageless.sh | sudo bash -s -- --accept --flagrant</li>
-            <li>Joplin Installation</li>
-            <li class="indent-1">wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash</li>
         </ul>
     </div>
     <br>
