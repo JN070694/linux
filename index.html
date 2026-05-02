@@ -108,7 +108,7 @@
             <br>
             <li>To Install Preferred Flatpak Packages</li>
             <li class="indent-1">flatpak install flathub com.brave.Browser</li>
-            <li class="indent-1">if Brave Origin, Nightly not available</li>
+            <li class="indent-2">if Brave Origin, Nightly not available</li>
             <li class="indent-1">flatpak install flathub com.bitwarden.desktop</li>
             <li class="indent-1">flatpak install flathub com.discordapp.Discord</li>
             <li class="indent-1">flatpak install flathub org.kde.kdenlive</li>
@@ -128,6 +128,14 @@
             <li class="indent-1">sudo apt update</li>
             <li class="indent-1">sudo apt install displaylink-driver</li>
             <li class="indent-2"><i>(Restart PC)</i></li>
+            <br>
+            <li>Update PC</li>
+            <li class="indent-1">sudo apt update</li>
+            <li class="indent-1">sudo apt upgrade</li>
+            <li class="indent-1">sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean</li>
+            <li class="indent-1">flatpak update</li>
+            <li class="indent-1">flatpak uninstall --unused</li>
+            <li class="indent-1">for dir in ~/.var/app/*/; do app=$(basename "$dir"); if ! flatpak info "$app" &>/dev/null; then rm -rf "$dir"; fi; done</li>
         </ul>
     </div>
     <br>
