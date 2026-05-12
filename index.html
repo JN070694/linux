@@ -78,15 +78,19 @@
             <li class="indent-1"><a href="Debian_WiFi_Disable_PowerSave.pdf" target="_blank">Disable WiFi PowerSave</a></li>
             <li class="indent-1"><a href="https://www.youtube.com/watch?v=9Ff9tl-32Wk" target="_blank">Update NVIDIA GPU Driver</a></li>
             <br>
-            <li>Setup Command(s):</li>
-            <li class="indent-1">sudo apt purge -y akregator firefox-esr konqueror plasma-welcome; sudo apt install -y curl fastfetch git maliit-keyboard</li>
-            <br>
-            <li>To Install Preferenced Packages</li>
-            <li class="indent-1">curl -fsSL https://agelesslinux.org/become-ageless.sh | sudo bash -s -- --accept --flagrant; sudo apt update && sudo apt install extrepo -y && sudo extrepo enable librewolf && sudo extrepo update librewolf && sudo apt update && sudo apt install librewolf -y</li>
-            <li class="indent-2">Required Add-on: <a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/" target="_blank">Bitwarden</a></li>
-            <br>
-            <li>To Install Flatpaks, (KDE)</li>
-            <li class="indent-1">sudo apt install -y flatpak && sudo apt install -y plasma-discover-backend-flatpak && flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</li>
+            <li>Setup Commands, (Consolidated):</li>
+            <li class="indent-1">sudo apt purge -y akregator firefox-esr konqueror plasma-welcome && \</li>
+            <li class="indent-1">sudo apt autoremove --purge -y && \</li>
+            <li class="indent-1">sudo apt install -y curl fastfetch git maliit-keyboard && \</li>
+            <li class="indent-1">curl -fsSL https://agelesslinux.org/become-ageless.sh | sudo bash -s -- --accept && \</li>
+            <li class="indent-1">sudo apt update && \</li>
+            <li class="indent-1">sudo apt install -y extrepo && \</li>
+            <li class="indent-1">sudo extrepo enable librewolf && \</li>
+            <li class="indent-1">sudo extrepo update librewolf && \</li>
+            <li class="indent-1">sudo apt update && \</li>
+            <li class="indent-1">sudo apt install -y librewolf && \</li>
+            <li class="indent-1">sudo apt install -y flatpak plasma-discover-backend-flatpak && \</li>
+            <li class="indent-1">flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo</li>
             <br>
             <li>To Install Preferred Flatpak Packages</li>
             <li class="indent-1">flatpak install flathub eu.betterbird.Betterbird</li>
