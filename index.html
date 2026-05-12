@@ -76,12 +76,16 @@
             <li class="indent-1">System Settings > Color & Themes > Login Screen (SDDM)</li>
             <li class="indent-1">System Settings > Power Management > 5,5,1</li>
             <li class="indent-1"><a href="Debian_WiFi_Disable_PowerSave.pdf" target="_blank">Disable WiFi PowerSave</a></li>
+            <li class="indent-1"><a href="https://www.youtube.com/watch?v=9Ff9tl-32Wk" target="_blank">Update NVIDIA GPU Driver</a></li>
             <br>
             <li>Setup Commands:</li>
             <li class="indent-1">sudo apt purge akregator</li>
             <li class="indent-1">sudo apt purge firefox-esr</li>
             <li class="indent-1">sudo apt purge konqueror</li>
+            <li class="indent-1">sudo apt purge plasma-welcome</li>
+            <li class="indent-1">sudo apt install curl</li>
             <li class="indent-1">sudo apt install fastfetch</li>
+            <li class="indent-1">sudo apt install git</li>
             <li class="indent-1">sudo apt install maliit-keyboard</li>
             <br>
             <li>To Install Preferenced Packages</li>
@@ -109,12 +113,11 @@
             <li class="indent-2">sudo apt install ./</li>
             <br>
             <li>Update PC Sequence</li>
-            <li class="indent-1">sudo apt update</li>
-            <li class="indent-1">sudo apt upgrade</li>
-            <li class="indent-1">sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean</li>
-            <li class="indent-1">flatpak update</li>
-            <li class="indent-1">flatpak uninstall --unused</li>
-            <li class="indent-1">for dir in ~/.var/app/*/; do app=$(basename "$dir"); if ! flatpak info "$app" &>/dev/null; then rm -rf "$dir"; fi; done</li>
+            <li class="indent-1">sudo fwupdmgr refresh && sudo fwupdmgr update -y && \</li>
+            <li class="indent-1">sudo apt update && sudo apt full-upgrade -y && \</li>
+            <li class="indent-1">sudo apt autoremove --purge -y && sudo apt autoclean && \</li>
+            <li class="indent-1">flatpak update -y && flatpak uninstall --unused -y && \</li>
+            <li class="indent-1">for dir in ~/.var/app/*/; do [ -d "$dir" ] && app=$(basename "$dir") && ! flatpak info "$app" &>/dev/null && { echo "Removing orphaned: $app"; rm -rf "$dir"; }; done</li>
         </ul>
     </div>
     <br>
